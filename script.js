@@ -14,23 +14,29 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
   })
   
     // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
-    var pet_info = {name:"My Pet Name", weight:"??", happiness:"??"};
+    var pet_info = {name:"Foxy", weight:50, happiness:50};
   
     function clickedTreatButton() {
       // Increase pet happiness
+      pet_info.happiness += 5;
       // Increase pet weight
+      pet_info.weight += 5;
       checkAndUpdatePetInfoInHtml();
     }
     
     function clickedPlayButton() {
       // Increase pet happiness
+      pet_info.happiness += 5;
       // Decrease pet weight
+      pet_info.weight -= 5;
       checkAndUpdatePetInfoInHtml();
     }
     
     function clickedExerciseButton() {
       // Decrease pet happiness
+      pet_info.happiness -= 5;
       // Decrease pet weight
+      pet_info.weight -= 5;
       checkAndUpdatePetInfoInHtml();
     }
   
@@ -41,6 +47,12 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     
     function checkWeightAndHappinessBeforeUpdating() {
       // Add conditional so if weight is lower than zero.
+      if(pet_info.weight < 0){
+        pet_info.weight = 0;
+      }
+      if(pet_info.happiness < 0){
+        pet_info.happiness = 0;
+      }
     }
     
     // Updates your HTML with the current values in your pet_info object
