@@ -7,6 +7,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     $('.treat-button').click(clickedTreatButton);
     $('.play-button').click(clickedPlayButton);
     $('.exercise-button').click(clickedExerciseButton);
+    $('.sleep-button').click(clickedSleepButton);
   
 
   
@@ -21,6 +22,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       pet_info.happiness += 5;
       // Increase pet weight
       pet_info.weight += 5;
+      // .hide() to hide the initial message, .fadeIn() to fade the message in
+      $(".message").text("Yum!").hide().fadeIn();
       checkAndUpdatePetInfoInHtml();
     }
     
@@ -29,6 +32,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       pet_info.happiness += 5;
       // Decrease pet weight
       pet_info.weight -= 5;
+      // .hide() to hide the initial message, .fadeIn() to fade the message in
+      $(".message").text("That was fun!").hide().fadeIn();
       checkAndUpdatePetInfoInHtml();
     }
     
@@ -37,6 +42,18 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       pet_info.happiness -= 5;
       // Decrease pet weight
       pet_info.weight -= 5;
+      // .hide() to hide the initial message, .fadeIn() to fade the message in
+      $(".message").text("I'm tired now, I need to sleep!").hide().fadeIn();
+      checkAndUpdatePetInfoInHtml();
+    }
+
+    function clickedSleepButton() {
+      // Increase pet happiness
+      pet_info.happiness += 5;
+      // Decrease pet weight
+      pet_info.weight -= 2;
+      // .hide() to hide the initial message, .fadeIn() to fade the message in
+      $(".message").text("I feel much better!").hide().fadeIn();
       checkAndUpdatePetInfoInHtml();
     }
   
