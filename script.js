@@ -91,13 +91,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
           }, 2000);
         }
       }else{
-        if ($(".pet-image").attr("src") !== "images/foxyNormal.jpg") {
-          $(".pet-image").attr("src", "images/foxyNormal.jpg");
-    
-          let sound = $("#happy-sound")[0];
-          sound.currentTime = 0;
-          sound.play();
-        }
+        $(".pet-image").attr("src", "images/foxyNormal.jpg");
       }
       $('.name').text(pet_info['name']);
       $('.weight').text(pet_info['weight']);
