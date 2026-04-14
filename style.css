@@ -85,14 +85,9 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%); /*centers elements*/
     font-size: 60px;
     font-weight: bold;
     color: red;
     text-align: center;
-  
-    display: none;
-    pointer-events: none;
-    z-index: 1000;
   }

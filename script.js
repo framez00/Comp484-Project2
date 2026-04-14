@@ -79,9 +79,25 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
         if ($(".pet-image").attr("src") !== "images/foxyMad.jpg") {
           $(".pet-image").attr("src", "images/foxyMad.jpg");
           showOverlayMessage("IM PISSED");
+
+          //add sound
+          let sound = $("#angry-sound")[0];
+          sound.currentTime = 0;
+          sound.play();
+
+          //stop it after 2 seconds
+          setTimeout(function () {
+            sound.pause();
+          }, 2000);
         }
       }else{
-        $(".pet-image").attr("src", "images/foxyNormal.jpg");
+        if ($(".pet-image").attr("src") !== "images/foxyNormal.jpg") {
+          $(".pet-image").attr("src", "images/foxyNormal.jpg");
+    
+          let sound = $("#happy-sound")[0];
+          sound.currentTime = 0;
+          sound.play();
+        }
       }
       $('.name').text(pet_info['name']);
       $('.weight').text(pet_info['weight']);
