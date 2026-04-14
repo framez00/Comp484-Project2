@@ -74,6 +74,12 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     
     // Updates your HTML with the current values in your pet_info object
     function updatePetInfoInHtml() {
+      
+      if(pet_info.happiness < 0){
+        $(".pet-image").attr("images", "foxyNormal.jpg");
+      }else{
+        $(".pet-image").attr("images", "foxyMad.jpg");
+      }
       $('.name').text(pet_info['name']);
       $('.weight').text(pet_info['weight']);
       $('.happiness').text(pet_info['happiness']);
