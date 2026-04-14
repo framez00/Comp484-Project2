@@ -78,7 +78,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       if(pet_info.happiness < 20){
         if ($(".pet-image").attr("src") !== "images/foxyMad.jpg") {
           $(".pet-image").attr("src", "images/foxyMad.jpg");
-          showOverlayMessage("IM PISSED");
+          showOverlayMessage("I'M PISSED");
 
           //add sound
           let sound = $("#angry-sound")[0];
