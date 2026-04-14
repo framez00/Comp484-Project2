@@ -88,7 +88,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
           //stop it after 2 seconds
           setTimeout(function () {
             sound.pause();
-          }, 2000);
+          }, 3000);
         }
       }else{
         $(".pet-image").attr("src", "images/foxyNormal.jpg");
