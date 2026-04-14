@@ -74,14 +74,27 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     
     // Updates your HTML with the current values in your pet_info object
     function updatePetInfoInHtml() {
-      
-      if(pet_info.happiness < 0){
-        $(".pet-image").attr("images", "foxyNormal.jpg");
+      // .attr() to change the attribute of an element/image source of depending on pets happiness
+      if(pet_info.happiness < 20){
+        if ($(".pet-image").attr("src") !== "images/foxyMad.jpg") {
+          $(".pet-image").attr("src", "images/foxyMad.jpg");
+          showOverlayMessage("IM PISSED");
+        }
       }else{
-        $(".pet-image").attr("images", "foxyMad.jpg");
+        $(".pet-image").attr("src", "images/foxyNormal.jpg");
       }
       $('.name').text(pet_info['name']);
       $('.weight').text(pet_info['weight']);
       $('.happiness').text(pet_info['happiness']);
+    }
+
+    function showOverlayMessage(text) {
+      $(".overlay-message")
+        .text(text)
+        .css("opacity", 1)
+        .hide()
+        .fadeIn(300)
+        .delay(1000)
+        .fadeOut(1000);
     }
   
