@@ -90,11 +90,11 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
 
     function showOverlayMessage(text) {
       $(".overlay-message")
-        .text(text)
-        .css("opacity", 1)
-        .hide()
-        .fadeIn(300)
-        .delay(1000)
-        .fadeOut(1000);
+        .text(text) //sets the message to display
+        .css("opacity", 1) //makes it visible
+        .hide() //visibility
+        .fadeIn(300) //fades in
+        .delay(1000) //delays the fade out
+        .fadeOut(1000); //fades out
     }
   
