@@ -95,14 +95,15 @@
     font-size: 60px;
     font-weight: bold;
     color: red;
-    text-shadow: /*gives a shadow with the following colors*/
-      2px 0 red,
-      -2px 0 cyan,
-      0 0 10px red;
+    text-shadow: /*gives a shadow with the following colors, glitch feeling*/
+      3px 3px red, /*3px right and down*/
+      -3px -3px cyan; /*3px left and up*/
   }
 
-  /*center everything*/
+  /*center properties*/
   body {
     text-align: center;
   }
+
+  
   
