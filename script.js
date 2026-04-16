@@ -85,7 +85,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
           sound.currentTime = 0;
           sound.play();
 
-          //stop it after 2 seconds
+          //stop it after 3 seconds
           setTimeout(function () {
             sound.pause();
           }, 3000);
@@ -102,8 +102,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
       $(".overlay-message")
         .hide() //visibility
         .text(text) //sets the message to display
-        .fadeIn(300) //fades in
-        .delay(1000) //delays the fade out
-        .fadeOut(1000); //fades out
+        .fadeIn(300) //fades in 0.3s
+        .delay(1000) //delays the fade out 1s
+        .fadeOut(1000); //fades out 1s
     }
   
