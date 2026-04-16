@@ -88,7 +88,7 @@
   }
 
   .overlay-message {
-    position: fixed;
+    position: fixed; /*message stays in a fixed spot*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /*centers elements*/
